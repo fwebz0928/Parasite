@@ -236,10 +236,10 @@ TextureImporter:
       name: GameSprites_0
       rect:
         serializedVersion: 2
-        x: 97
-        y: 64
-        width: 30
-        height: 32
+        x: 67
+        y: 45
+        width: 10
+        height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: GameSprites_1
       rect:
         serializedVersion: 2
-        x: 67
-        y: 64
-        width: 30
-        height: 32
+        x: 65
+        y: 33
+        width: 14
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,90 +275,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameSprites_2
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 32
-        width: 30
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6610979f9ea087f4d96de944748c5367
-      internalID: 1700076553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameSprites_3
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 32
-        width: 30
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5ca1208f195154469e605ffd909de2b
-      internalID: 1571626499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameSprites_4
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 0
-        width: 30
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15fda7066de94934791e719b64b70d92
-      internalID: -350083394
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameSprites_5
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 0
-        width: 30
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0c6ee09862c7bb48a1d92e7f18d7fb9
-      internalID: -154456984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: GameSprites_6
       rect:
         serializedVersion: 2
@@ -367,7 +283,7 @@ TextureImporter:
         width: 20
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -375,6 +291,174 @@ TextureImporter:
       bones: []
       spriteID: 00023c9bdb93d7544ae9248c4dc52f7c
       internalID: 1024906701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pill Projectile
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 99
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefab9fc6004c9f49a7d33f3fb6bbe9b
+      internalID: 1530700070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameSprites_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 100
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bc13ee8be01d14cae886abcbb33dbf
+      internalID: -1757993902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameSprites_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 68
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24db4154e756bb49b36c06458807ee7
+      internalID: 1571626499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TCell
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea923014aefc5174fa59b64627c8353b
+      internalID: -1721606219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodCell
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 33
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b21a90d47dfa7e46baae4ef874b2e0e
+      internalID: -1963236449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodCell_01
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 53
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bd6fd5827b0644092c0a749b0b5c72
+      internalID: -1914875674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameSprites_4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 85
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99fd2d67263aad849bce1863edb56f5c
+      internalID: -1729735676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameSprites_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b0ad04a460dbc4189aa520606f8884
+      internalID: -154456984
       vertices: []
       indices: 
       edges: []
@@ -390,17 +474,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      AntiBiotic: 1700076553
       Basic_Bullet: 292965214
+      BloodCell: -1963236449
+      BloodCell_01: -1914875674
       GameSprites_0: -2057559853
       GameSprites_1: -152695113
-      GameSprites_2: 1700076553
+      GameSprites_2: -1757993902
       GameSprites_3: 1571626499
-      GameSprites_4: -350083394
+      GameSprites_4: -1729735676
       GameSprites_5: -154456984
       GameSprites_6: 1024906701
       Health_Empty: -98403781
       Health_Full: 4985832
+      Pill Projectile: 1530700070
       Player: -664291191
+      TCell: -350083394
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

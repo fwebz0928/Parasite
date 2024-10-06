@@ -23,8 +23,10 @@ public class PlayerController : MonoBehaviour, IDamageable
     public ObjectPool<Projectile> ProjectilePool => projectile_pool;
     public Action<int> OnHealthUpdated;
     public Action<int, int> OnMaxHealthUpdated;
+    public Action<int> OnLivesUpdated;
     public int MaxHealth => base_health;
     public int CurrentHealth => current_health;
+    public int Lives => lives;
 
     private void Awake()
     {
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour, IDamageable
             OnProjectileRelease,
             OnProjectileDestroyed,
             true,
-            50,
+            100,
             1000
         );
 
@@ -45,17 +47,20 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        Movement();
-        Fire();
-    }
-    private void Movement()
-    {
+        // Get the raw input axes for snappy input
         var moveX = Input.GetAxisRaw("Horizontal");
         var moveY = Input.GetAxisRaw("Vertical");
 
+        // Set the movement direction based on input
         move_dir = new Vector2(moveX, moveY).normalized;
-        target_position += move_dir * (move_speed * Time.deltaTime);
-        transform.position = Vector2.Lerp(transform.position, target_position, smoothing);
+
+        Fire();
+    }
+
+    private void FixedUpdate()
+    {
+        var targetVelocity = move_dir * move_speed;
+        rb2d.velocity = targetVelocity;
     }
 
     private void Fire()
@@ -78,6 +83,20 @@ public class PlayerController : MonoBehaviour, IDamageable
     public void OnTakeDamage(int damage_amount)
     {
         current_health = Mathf.Clamp(current_health - 1, 0, base_health);
+        OnHealthUpdated?.Invoke(current_health);
+        if (current_health <= 0)
+        {
+            //Check how many lives player has and reset if possible
+            if (lives > 0)
+            {
+                lives -= 1;
+                current_health = MaxHealth;
+                OnHealthUpdated?.Invoke(current_health);
+                OnLivesUpdated?.Invoke(lives);
+            }
+            else // No Lives available so display the game over menu
+            { }
+        }
     }
 
 
