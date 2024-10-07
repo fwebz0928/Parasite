@@ -15,8 +15,6 @@ namespace UI
             heart_image.sprite = b_filled ? heart_icons[0] : heart_icons[1];
             if (b_filled == false)
                 this.transform.DOScale(new Vector3(1.2f, 1.2f, 1.0f), .15f).SetLoops(2, LoopType.Yoyo);
-
-            print($"Updating Heart Container");
         }
 
 

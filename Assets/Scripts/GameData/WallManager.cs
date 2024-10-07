@@ -16,6 +16,10 @@ namespace GameData
 
         private void Awake()
         {
+            //Remove any old wall
+            foreach (Transform wall_child in wall_parent)
+                Destroy(wall_child.gameObject);
+
             // Get the height of the wall based on the sprite renderer's size
             wall_height = wall_prefab.GetComponentInChildren<SpriteRenderer>().bounds.size.y;
 

@@ -120,7 +120,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.008308858, y: 0.051514804}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -131,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.375, y: 0.78125}
+  m_Size: {x: 0.9765604, y: 0.8842796}
   m_EdgeRadius: 0
 --- !u!114 &5839585737110437392
 MonoBehaviour:
@@ -146,11 +146,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  score: 10
+  score: 40
+  hit_sfx: {fileID: 8300000, guid: bb704e2953caf0741b64dfdddaeb0235, type: 3}
+  death_sfx: {fileID: 8300000, guid: c0098622f23e9954db15e2f6984f894e, type: 3}
+  movement_type: 1
+  move_speed: 2
+  sine_freq: 10
+  sine_amplitude: 10
+  trace_distance: 1
+  trace_layer:
+    serializedVersion: 2
+    m_Bits: 1024
   fire_type: 2
-  min_attack_rate: 1
-  max_attack_rate: 1
+  min_attack_rate: 1.5
+  max_attack_rate: 2.5
   fire_loops: 1
+  bullet_speed: 2
   projectile_prefab: {fileID: 8610017702548512975, guid: 809991d10d2dae9458b7a24e0b8474a8, type: 3}
   spawn_point: {fileID: 4113977462628982739}
 --- !u!50 &8471048301092774340

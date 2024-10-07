@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ffa36ca1e844f68572064801b843e0, type: 3}
+  m_Name: CrimsonHighway
+  m_EditorClassIdentifier: 
+  LevelName: The Crimson Highway
+  level_duration: 100
+  spawnable_enemies:
+  - SpawnChance: 80
+    EnemyPrefab: {fileID: 5839585737110437392, guid: 169b06a049d19ae42977e4e792787d04, type: 3}
+  - SpawnChance: 40
+    EnemyPrefab: {fileID: 5839585737110437392, guid: 108dde6a9166d8d4ba2b5ffc7a95eacc, type: 3}
+  WallSprites: []

@@ -17,6 +17,9 @@ namespace GameData
         public void InitScoreText(int score)
         {
             score_text.text = $"+{score}";
+            score_text.color = Color.white;
+            elapsed_time = 0.0f;
+
             StartCoroutine(AnimateNumbers());
         }
 
@@ -39,6 +42,9 @@ namespace GameData
                 }
                 yield return null;
             }
+
+            GameManager.instance.ScoreTextPool.Release(this);
+
         }
 
 

@@ -5,13 +5,18 @@ using DG.Tweening;
 using GameData;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
     public class MainUI : MonoBehaviour
     {
+        public static MainUI Instance;
+
+
         [SerializeField] private PlayerController player_ref;
         [SerializeField] private GameManager game_manager;
+        [SerializeField] private CanvasGroup canvas_group;
 
 
         [Header("Health")]
@@ -25,9 +30,17 @@ namespace UI
         [Header("Level")]
         [SerializeField] private CanvasGroup level_group;
         [SerializeField] private TextMeshProUGUI level_name;
+        [SerializeField] private Slider level_timer;
 
 
         private List<HeartContainer> hearts = new List<HeartContainer>();
+
+        private void Awake()
+        {
+            Instance = this;
+            canvas_group.alpha = 0.0f;
+        }
+
 
         private void Start()
         {
@@ -35,6 +48,7 @@ namespace UI
             player_ref.OnMaxHealthUpdated += MaxHealthUpdated;
             player_ref.OnLivesUpdated += LivesUpdated;
             game_manager.OnScoreUpdated += ScoreUpdated;
+            //game_manager.OnTimerUpdated += TimerUpdated;
 
             //Clean up any hearts from the editor
             foreach (Transform child_transform in heart_parent)
@@ -45,11 +59,18 @@ namespace UI
             for (var i = 0; i < player_ref.MaxHealth; i++)
                 CreateNewHeart();
 
+            //Set the level Timer
+            level_timer.maxValue = game_manager.level_timer;
+            level_timer.value = game_manager.elapsed_timer;
+
             ScoreUpdated(game_manager.CurrentScore);
             LivesUpdated(player_ref.Lives);
 
-            //Fade in then fade out the level Title
-            StartCoroutine(DisplayLevelTitle());
+
+        }
+        private void TimerUpdated(float timer)
+        {
+            level_timer.value = timer;
         }
         private void LivesUpdated(int current_lives)
         {
@@ -76,8 +97,6 @@ namespace UI
             }
 
         }
-
-
         private void CreateNewHeart()
         {
             var new_heart = Instantiate(heart_prefab, heart_parent);
@@ -85,13 +104,14 @@ namespace UI
             hearts.Add(new_heart);
 
         }
-
-        private IEnumerator DisplayLevelTitle()
+        public IEnumerator DisplayLevelTitle()
         {
-            yield return level_group.DOFade(1.0f, .25f);
-            yield return new WaitForSeconds(1.0f);
-            yield return level_group.DOFade(0.0f, .25f);
+            yield return level_group.DOFade(1.0f, .35f);
+            yield return new WaitForSeconds(2f);
+            yield return level_group.DOFade(0.0f, .35f);
         }
+
+
 
 
     }
